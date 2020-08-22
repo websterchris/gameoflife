@@ -45,7 +45,7 @@ const calculateNext = () => {
     for (x = 0; x < cells[y].length; x++) {
       // false && neighbours === 3 then true
       // true && neighbours < 2 || neighbours > 3 then false
-      // else true
+      // else current value
       const currentCell = prevCells[y][x];
       let neighbours = 0;
 
@@ -78,12 +78,10 @@ const calculateNext = () => {
       }
       //bottom left (x -1, y +1)
       if (x > 0 && y < maxCells && prevCells[y + 1][x - 1]) {
-        console.log("boo");
         neighbours += 1;
       }
       //left (x-1, y)
       if (x > 0 && prevCells[y][x - 1]) {
-        console.log("boo");
         neighbours += 1;
       }
 
