@@ -1,7 +1,7 @@
 const canvas = {
   background: "#264653",
-  height: 1000,
-  width: 1000,
+  height: 750,
+  width: 750,
 };
 
 const speed = 5;
@@ -48,10 +48,6 @@ const calculateNext = () => {
       // else current value
       const currentCell = prevCells[y][x];
       let neighbours = 0;
-
-      if (currentCell) {
-        console.log(y);
-      }
       // top left (x-1, y-1)
       if (x > 0 && y > 0 && prevCells[y - 1][x - 1]) {
         neighbours += 1;
